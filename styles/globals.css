@@ -2,3 +2,42 @@
 
 @plugin "../hero.ts";
 @source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+@theme {
+  /* custom color */
+  --color-green-primary: #52b788;
+  --color-green-secondary: #2d6a4f;
+  --color-green-tertiary: #081c15;
+  --color-gray-primary: #c2c9c6;
+
+  /* inner shadow */
+  --inset-shadow-primary: inset -4px -4px 10px rgba(255, 255, 255, 0.15);
+  --inset-shadow-secondary: inset -2px -2px 8px rgba(255, 255, 255, 0.1);
+}
+
+@layer components {
+  .wrapper {
+    @apply mx-auto w-full max-w-[1200px] px-4 xl:px-0;
+  }
+
+  .glass {
+    box-shadow: var(--inset-shadow-primary), var(--inset-shadow-secondary);
+  }
+
+  .text-spin {
+    animation: text-spin 8s linear infinite;
+  }
+}
+
+@keyframes text-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+::-webkit-scrollbar {
+  @apply hidden;
+}
