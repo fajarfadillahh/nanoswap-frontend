@@ -1,6 +1,6 @@
-import BackgroundPattern from "@/components/base/BackgroundPattern";
-import Footer from "@/components/base/Footer";
-import Header from "@/components/base/Header";
+import BackgroundPattern from "@/components/common/BackgroundPattern";
+import Footer from "@/components/common/Footer";
+import Header from "@/components/common/Header";
 import { HTMLAttributes, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
