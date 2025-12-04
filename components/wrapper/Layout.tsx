@@ -15,7 +15,12 @@ export default function Layout({ children, className }: LayoutProps) {
       <Header />
       <BackgroundPattern />
 
-      <div className={twMerge("h-full min-h-screen font-normal", className)}>
+      <div
+        className={twMerge(
+          "relative h-full min-h-screen font-normal",
+          className,
+        )}
+      >
         {children}
       </div>
 

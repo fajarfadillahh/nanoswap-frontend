@@ -18,8 +18,8 @@ export default function HomePage() {
   const router = useRouter();
 
   return (
-    <Layout>
-      <section className="wrapper relative isolate flex items-start justify-between p-[64px_0_75px]">
+    <Layout className="overflow-hidden">
+      <section className="wrapper relative isolate flex items-start justify-between p-[72px_0_75px]">
         <div className="grid gap-10">
           <div className="grid gap-4">
             <h1 className="text-7xl leading-[100%] font-bold -tracking-wider text-white">
@@ -120,7 +120,7 @@ export default function HomePage() {
         <Link
           href={"/"}
           className={twMerge(
-            "group inline-flex items-center gap-2 text-lg font-normal text-white hover:underline",
+            "group inline-flex items-center gap-2 font-normal text-white hover:underline",
             helvetica.className,
           )}
         >
@@ -153,7 +153,7 @@ export default function HomePage() {
           {features.map((feature) => (
             <SpotlightCard
               key={feature.id}
-              className="border-green-secondary/50 bg-green-primary/3 grid gap-8 rounded-[18px] border p-8"
+              className="border-green-secondary/50 bg-green-primary/3 grid gap-8 rounded-[18px] border p-8 backdrop-blur-md"
             >
               <feature.icon
                 weight="duotone"
