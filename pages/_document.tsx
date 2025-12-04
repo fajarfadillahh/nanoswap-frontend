@@ -8,7 +8,7 @@ export default function Document() {
       <Head />
       <body
         className={twMerge(
-          `bg-green-tertiary overflow-x-hidden text-white antialiased`,
+          `bg-green-tertiary relative isolate overflow-x-hidden text-white antialiased`,
           space.className,
         )}
       >

@@ -1,3 +1,4 @@
+import SpotlightCard from "@/components/common/SpotlightCard";
 import Layout from "@/components/wrapper/Layout";
 import { helvetica } from "@/lib/fonts";
 import { features, supppotedCoin } from "@/lib/site";
@@ -149,10 +150,10 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-3 items-start gap-5">
-          {features.map((feature, index) => (
-            <div
+          {features.map((feature) => (
+            <SpotlightCard
               key={feature.id}
-              className={`grid gap-8 rounded-[18px] p-8 ${index === 1 ? "glass bg-green-secondary/50" : "border-green-secondary/50 border"}`}
+              className="border-green-secondary/50 bg-green-primary/3 grid gap-8 rounded-[18px] border p-8"
             >
               <feature.icon
                 weight="duotone"
@@ -175,7 +176,7 @@ export default function HomePage() {
                   {feature.description}
                 </p>
               </div>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 
